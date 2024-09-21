@@ -15,12 +15,12 @@ Além disso, é possível inverter a ideia do projeto, basta inverter o comando 
 - **1 LED**
 # Montagem do Circuito
 **1. Conectar o Botão**
-- Usando um Protoboard, encaixe um botão de pressão em seu meio com dois terminais de um lado e dois terminais de outro lado.
-- De um lado do botão conecte o GND (0V) e o VCC (5V) (o VCC deverá ser concectado com um resistor de 10KΩ) por fios jumpers.
-- Do outro lado conecte um fio jumper ao pino digital 2 do arduino (lembre - se de conectar no terminal inverso ao colocado no VCC).
+  - Usando um Protoboard, encaixe um botão de pressão em seu meio com dois terminais de um lado e dois terminais de outro lado.
+  - De um lado do botão conecte o GND (0V) e o VCC (5V) (o VCC deverá ser concectado com um resistor de 10KΩ) por fios jumpers.
+  - Do outro lado conecte um fio jumper ao pino digital 2 do arduino (lembre - se de conectar no terminal inverso ao colocado no VCC).
 **2. Conectar o LED**
-- No mesmo Protoboard, encaixe o LED. Lembre-se o terminal maior é o positivo (VCC) e o menor, o negativo (GND).
-- Coloque cada terminal em uma linha diferente.
-- Ligue, com um fio jumper, o pino digital 12 do arduino ao VCC do LED (terminal maior) a partir de um resistor de 10KΩ.
+  - No mesmo Protoboard, encaixe o LED. Lembre-se o terminal maior é o positivo (VCC) e o menor, o negativo (GND).
+  - Coloque cada terminal em uma linha diferente.
+  - Ligue, com um fio jumper, o pino digital 12 do arduino ao VCC do LED (terminal maior) a partir de um resistor de 10KΩ.
 - Conecte o GNG (terminal menor) do LED ao GND do arduino com um fio jumper.
-  
+    
