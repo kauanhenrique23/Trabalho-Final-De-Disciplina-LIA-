@@ -4,6 +4,9 @@ Versão 1.0 Plataforma: Arduino UNO
 - **Arduino Uno**
 
     Microcontrolador responsável por coordenar o movimento dos dois motores simultaneamente.
+- **Protoboard**
+
+    Aonde será colocado o Medidor Ultrassônico e os fios para sua coneção.
 - **Módulo de Motor Ponte H dupla L298N**
 
     A partir da programação estabelecida no Arduino IDE, ele controla o movimento dos motores.
@@ -47,8 +50,21 @@ Este projeto implementa um robô de duas rodas, que através de  um medidor ultr
 
   **- Módulo Sensor de Distância Ultrassônico HC-SR04:** 
   
-O sensor envia um pulso ultrassônico, a onda é bloquada por algum possível obstáculo e é retornada. O Arduino usa esse tempo de ida e volta, e com base na fórmula: *Distância  = (Tempo de duração do sinal de saída × velocidade do som) / 2)*, será possível saber a distância entre o medidor ultrassônico e um obstáculo à sua frente, pois como sabemos a velocidade do som(pulso ultrassônico) e o tempo de duração(ida e volta), posteriormente será possível calcular a distância.
+O sensor envia um pulso ultrassônico, a onda é bloquada por algum possível obstáculo e é retornada. O Arduino usa esse tempo de ida e volta, e com base na fórmula: *Distância  = (Tempo de duração do sinal de saída × velocidade do som) / 2)*, será possível saber a distância entre o medidor ultrassônico e um obstáculo à sua frente, pois como sabemos a velocidade do som(pulso ultrassônico): 340 m/s; e o tempo de duração(ida e volta), posteriormente será possível calcular a distância.
+
+  **- Controle dos Motores**
+
+- No Módulo de Motor L298N é possível fazer o controle de 2 motores, simultaneamente, conectando o positivo e negativo do motor_A ao OUT1 e OUT2(motor_A); e do motor_B ao OUT3 e OUT4(motor_B). Lembre-se sempre de fazer um padrão: se colocar no OUT1 o polo postivo, coloque também no OUT3 o polo postivo do outro motor; e se colocou o positivo no OUT2, coloque o positivo do outro motor no OUT4 e assim vice-versa. Para alimentar os motores será necessário uma fonte que poderá ser uma bateria de 9V usada para alimentar também o Arduino UNO ou pilhas que possuem uma tensão entre 3 e 6 volts para os motores funcionarem normalmente. Conecte, através de cabos jumpers, o postivo da fonte ao encaixe de 12V do módulo e o negativo, ao GND. 
+- Para fazer o controle do movimento dos motores - se vão girar no sentido horário ou no sentido anti-horário, se vão ficar parados ou não - será necessário conectar 4 pinos digitais do Arduino quaisquer, respectivamente, às entradas IN1 e IN2(motor_A), IN3 e IN4(motor_B) do módulo. O movimento dos motores estão diretamente ligados à que estados lógicos esses 4 pinos estão de acordo com a tabela abaixo:
+
+![Imagem](https://github.com/user-attachments/assets/5e4278c6-b410-4580-91f8-dc3fdb7c9840)
+
+
+
 
   **- Ideia da Programação:** 
   
 Agora que sabemos a distância, é só produzir um código em que quando a distância for menor que tal quantia, terá uma consequência, que por exemplo pode ser o robô ir para trás. E se a distância for maior, o robô fazerá o contrário que no caso será ir para frente. Essa é a ideia em que todo este projeto é baseada; ela possui várias aplicações e o usuário poderá usá-la da maneira que quiser, para construir, assim, o seu projeto.
+
+## Considerações Finais
+Este projeto pode ser atribuído à várias aplicações no meio acadêmico e principalemente, no meio profissional. Em indústrias e fábricas, pode se expandir a tecnologia no uso de robôs automáticos que não precisam de nenhum tipo de operador para controlá-los. Com o uso de sensores ultrassônicos, facilita mais ainda o desenvolvimento dessas ideias. Por exemplo, carros que dirigem sozinhos podem ser construídos com o uso de arduínos e alguns sensores. Essa nova tecnologia pode, e já está transformando o mundo como conhecemos e vivemos.
