@@ -1,0 +1,57 @@
+const byte Pin_A1 = 2;     //Pino digital 1 da roda A
+const byte Pin_A2 = 3;     //Pino digital 2 da roda A 
+const byte Pin_B1 = 4;     //Pino digital 1 da roda B
+const byte Pin_B2 = 5;     //Pino digital 2 da roda B
+const byte PinTrigger = 9; //Pino digital que comanda o lançamento da onda ultrassônica
+const byte PinEcho = 8;    //Pino digital que recebe e interpreta a onda ultrassônica recebida
+
+volatile float VelocidadeSom = 0.000340; //Declaração da variável de velocidade do som em metros por microsegundo
+
+volatile float TempoEcho = 0; //Variável do tempo incialmente possui valor 0
+
+float CalculaDistancia(float Tempo_us) //Variável que calcula a distância em metros do medidor ultrassônico até o obstáculo mais próximo em sua frente
+{
+  return((Tempo_us*VelocidadeSom)/2);
+}
+
+void setup() {  
+pinMode(Pin_A1, OUTPUT);       //Pino digital 1 da roda A como saída
+pinMode(Pin_A2, OUTPUT);       //Pino digital 2 da roda A como saída
+pinMode(Pin_B1, OUTPUT);       //Pino digital 1 da roda B como saída
+pinMode(Pin_B2, OUTPUT);       //Pino digital 2 da roda B como saída
+pinMode(PinEcho, INPUT);       //Pino digital de entrada da onda ultrassônica
+pinMode(PinTrigger, OUTPUT);   //Pino digital de saída da onda ultrassônica
+digitalWrite(PinTrigger, LOW); //Definição do pino digital de saída da onda ultrassônica inicialmente como baixo
+
+Serial.begin(9600); //Inicializa a Porta Serial
+delay(100);
+}
+
+void loop() {
+digitalWrite(PinTrigger, HIGH); //Liberar onda ultrassônica por 10 microsegundos
+delayMicroseconds(10);
+digitalWrite(PinTrigger, LOW);
+
+TempoEcho = pulseIn(PinEcho, HIGH); //Calcula o tempo de ida e volta da onda ultrassônica em microsegundos
+
+if(CalculaDistancia((TempoEcho)*100) > 30) //Se a distância em centímetros for maior que 30 centímetros o programa irá rodar tudo que estiver dentro da função IF
+{
+    digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, LOW); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, LOW);   //O robô segue em frente até algo fazê-lo mudar de movimento
+}
+else //Se a distância for menor que 30 centímetros o programa irá rodar as linha de código abaixo que estão dentro da função ELSE                                                        
+{    
+    digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, HIGH); //O robô fica parado por 0.2 segundos
+    delay(200);
+    digitalWrite(Pin_A1, LOW); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, LOW); digitalWrite(Pin_B2, HIGH);   //O robô irá para trás por 1 segundo
+    delay(1000);
+    digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, HIGH); //O robô ficará parado por 0.2 segundos
+    delay(200);
+    digitalWrite(Pin_A1, LOW); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, LOW);   //O robô irá fazer um giro de 90 graus em sentido horário
+    delay(500);
+    digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, HIGH); //O robô ficará parado por 0.2 segundos
+    delay(200);
+}
+Serial.println("Distancia(cm):");                  // Mostra o texto em aspas na Porta Serial
+Serial.println(CalculaDistancia((TempoEcho)*100)); // Mostra a distância em centímetros na Porta Serial
+delay(100);                                        // Pausa o program por 0.1 segundos
+}
