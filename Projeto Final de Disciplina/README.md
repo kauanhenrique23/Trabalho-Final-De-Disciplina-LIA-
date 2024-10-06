@@ -1,4 +1,4 @@
-# Trabalho-Final-De-Disciplina-LIA
+# Robô Desviador de Obstáculos
 Versão 1.0 Plataforma: Arduino UNO
 ## Componentes Utilizados
 - **Arduino Uno**
