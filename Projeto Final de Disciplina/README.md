@@ -55,7 +55,7 @@ Este projeto implementa um robô de duas rodas, que através de  um medidor ultr
 
 **2. Estrutura Mecânica**
 
-  **- Controle dos Motores**
+  **- Motores**
 
 - **Conexão:** Usando o Módulo de Motor L298N é possível fazer o controle de 2 motores simultaneamente, conectando o positivo e negativo do motor_A ao OUT1 e OUT2; e do motor_B ao OUT3 e OUT4. Lembre-se sempre de fazer um padrão: se colocar no OUT1 o polo postivo, coloque também no OUT3 o polo postivo do outro motor; se colocar o positivo no OUT2, coloque o positivo do outro motor no OUT4 e assim vice-versa.
 - **Alimentação:** Para alimentar os motores será necessário uma fonte que poderá ser uma bateria de 9V usada para alimentar também o Arduino UNO; ou pilhas que possuem uma tensão entre 3 e 6 volts para os motores funcionarem normalmente. Conecte, através de cabos jumpers, o postivo da fonte ao encaixe de 12V do módulo e o negativo, ao GND. 
