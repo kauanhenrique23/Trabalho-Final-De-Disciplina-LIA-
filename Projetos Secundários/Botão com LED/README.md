@@ -1,4 +1,4 @@
-# LED com Botão
+# Botão com LED
 # Descrição 
 O intuito deste projeto é fazer um LED acender a parir de um botão. A programação necessário para se produzir este projeto é altamente básica. A partir da ideia utilizada neste projeto, o interessado poderá expandir esta ideia e fazer o seu próprio projeto sobre qualquer coisa.
 # Funcionamento
