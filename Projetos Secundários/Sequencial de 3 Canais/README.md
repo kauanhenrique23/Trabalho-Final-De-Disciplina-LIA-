@@ -2,9 +2,9 @@
 # Descrição
 Este projeto visa criar uma sincronia entre três LED's ao caso que acendam em ordem e harmonicamente. Usando esta ideia será possui produzir inúmeros tipos de mecanismos que utilizamos em nosso cotidiano, como por exemplo, um sinalizador de garagem ou até mesmo um semáforo.
 # Funcionamento
-- **LED_1 aceso:** Quando o LED_1 estiver aceso o resto dos LED's estarão apagados. Se o LED_1 não estiver aceso significa que algum dos outros dois LED's está aceso.
-- **LED_2 aceso:** Quando o LED_2 estiver aceso o resto dos LED's estarão apagados. Se o LED_2 não estiver aceso significa que algum dos outros dois LED's está aceso.
-- **LED_3 aceso:** Quando o LED_3 estiver aceso o resto dos LED's estarão apagados. Se o LED_3 não estiver aceso significa que algum dos outros dois LED's está aceso.
+- **LED_1 aceso:** Quando o LED_1 estiver aceso o resto dos LED's estarão apagados. Se o LED_1 não estiver aceso significa que algum dos outros dois LED's estão aceso.
+- **LED_2 aceso:** Quando o LED_2 estiver aceso o resto dos LED's estarão apagados. Se o LED_2 não estiver aceso significa que algum dos outros dois LED's estão aceso.
+- **LED_3 aceso:** Quando o LED_3 estiver aceso o resto dos LED's estarão apagados. Se o LED_3 não estiver aceso significa que algum dos outros dois LED's estão aceso.
 - **Ordem de Ligação:** Primeiramente se acenderá o LED_1, em seguida ele se apagará e ao mesmo tempo o LED_2 acenderá, logo depois, o LED_2 se apagará e o LED_3 acenderá. E então, quando o LED_3 se apagar o ciclo será reiniciado.
 - 
 # Materiais Necessários
