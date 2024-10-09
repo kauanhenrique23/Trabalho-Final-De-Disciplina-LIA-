@@ -63,11 +63,18 @@ Este projeto implementa um robô de duas rodas mecânicas ligadas a um eixo de u
 
 ![Imagem](https://github.com/user-attachments/assets/5e4278c6-b410-4580-91f8-dc3fdb7c9840)
 
+**- Os dois possíveis esquemas elétricos que se podem usar para produzir este projeto:**
+
+- [Esquema Elétrico 1 do Projeto](https://github.com/kauanhenrique23/Trabalho-Final-De-Disciplina-LIA-/blob/main/Projeto%20Final%20de%20Disciplina/Esquema%20Eletrico.png)
+- [Esquema Elétrico 2 do Projeto](https://github.com/kauanhenrique23/Trabalho-Final-De-Disciplina-LIA-/blob/main/Projeto%20Final%20de%20Disciplina/Esquema%20El%C3%A9trico.png)
+
 **3. Ideia do Programa:** 
   
 - Agora que sabemos a distância, é só produzir um código em que quando a distância for menor que tal quantia, terá uma consequência, que por exemplo pode ser o robô ir para trás. E se a distância for maior, o robô irá fazer o contrário que no caso será ir para frente. Essa é a ideia em que todo este projeto é baseado; ela possui várias aplicações e o usuário poderá usá-la da maneira que quiser, para construir, assim, o seu projeto. 
 - A distância utilizada neste projeto foi de 30 cm, mas através de testes de eficiência e coleta de dados, foi constatado que uma distância que faz manter uma boa eficiência do projeto deve estar entre 20 e 30 cm.
-- Dentro deste diretório está presente todo o código usado neste projeto com instruções detalhadas para facilitar o entendimento do leitor.
+- Dentro deste diretório está presente todo o código usado neste projeto com instruções detalhadas para facilitar o entendimento do leitor. Para acessá-lo clique no link abaixo:
+
+[Códido do Projeto](https://github.com/kauanhenrique23/Trabalho-Final-De-Disciplina-LIA-/blob/main/Projeto%20Final%20de%20Disciplina/C%C3%B3digo.txt)
 
 ## Considerações Finais
 Este projeto pode ser atribuído à várias aplicações no meio acadêmico e principalmente, no meio profissional. Em indústrias e fábricas,por exemplo, pode se expandir a tecnologia no uso de robôs automáticos que não precisam de nenhum tipo de operador para controlá-los. Com o uso de sensores ultrassônicos, facilita mais ainda o desenvolvimento dessas ideias. Por exemplo, carros que dirigem sozinhos podem ser construídos com o uso de arduino e alguns sensores. Essa nova tecnologia pode, e já está, transformando o mundo como conhecemos e vivemos.
