@@ -74,7 +74,7 @@ Este projeto implementa um robô de duas rodas mecânicas ligadas a um eixo de u
 - A distância utilizada neste projeto foi de 30 cm, mas através de testes de eficiência e coleta de dados, foi constatado que uma distância que faz manter uma boa eficiência do projeto deve estar entre 20 e 30 cm.
 - Dentro deste diretório está presente todo o código usado neste projeto com instruções detalhadas para facilitar o entendimento do leitor. Para acessá-lo clique no link abaixo:
 
-[Códido do Projeto](https://github.com/kauanhenrique23/Trabalho-Final-De-Disciplina-LIA-/blob/main/Projeto%20Final%20de%20Disciplina/C%C3%B3digo.txt)
+- [Códido do Projeto](https://github.com/kauanhenrique23/Trabalho-Final-De-Disciplina-LIA-/blob/main/Projeto%20Final%20de%20Disciplina/C%C3%B3digo.txt)
 
 ## Considerações Finais
 Este projeto pode ser atribuído à várias aplicações no meio acadêmico e principalmente, no meio profissional. Em indústrias e fábricas,por exemplo, pode se expandir a tecnologia no uso de robôs automáticos que não precisam de nenhum tipo de operador para controlá-los. Com o uso de sensores ultrassônicos, facilita mais ainda o desenvolvimento dessas ideias. Por exemplo, carros que dirigem sozinhos podem ser construídos com o uso de arduino e alguns sensores. Essa nova tecnologia pode, e já está, transformando o mundo como conhecemos e vivemos.
