@@ -43,7 +43,7 @@ else //Se a distância for menor que 30 centímetros o programa irá rodar as li
     digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, HIGH); //O robô fica parado por 0.2 segundos
     delay(200);
     digitalWrite(Pin_A1, LOW); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, LOW); digitalWrite(Pin_B2, HIGH);   //O robô irá para trás por 1 segundo
-    delay(1000);
+    delay(500);
     digitalWrite(Pin_A1, HIGH); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, HIGH); //O robô ficará parado por 0.2 segundos
     delay(200);
     digitalWrite(Pin_A1, LOW); digitalWrite(Pin_A2, HIGH); digitalWrite(Pin_B1, HIGH); digitalWrite(Pin_B2, LOW);   //O robô irá fazer um giro de 90 graus em sentido horário
